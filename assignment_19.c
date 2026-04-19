@@ -3,16 +3,16 @@
 
 #define MAX 100
 
-// Structure definition
+
 struct Employee {
     char name[50];
     char designation[50];
     char gender;
-    char doj[15];   // Date of Joining
+    char doj[15]; 
     float salary;
 };
 
-// Function prototypes
+
 void totalEmployees(int n);
 void countGender(struct Employee e[], int n);
 void salaryAbove10000(struct Employee e[], int n);
@@ -25,7 +25,7 @@ int main() {
     printf("Enter number of employees: ");
     scanf("%d", &n);
 
-    // Input details
+  
     for(i = 0; i < n; i++) {
         printf("\nEnter details of employee %d\n", i + 1);
 
@@ -45,7 +45,6 @@ int main() {
         scanf("%f", &e[i].salary);
     }
 
-    // Function calls
     totalEmployees(n);
     countGender(e, n);
     salaryAbove10000(e, n);
@@ -54,12 +53,12 @@ int main() {
     return 0;
 }
 
-// a) Total number of employees
+
 void totalEmployees(int n) {
     printf("\nTotal number of employees: %d\n", n);
 }
 
-// b) Count male and female employees
+
 void countGender(struct Employee e[], int n) {
     int male = 0, female = 0, i;
 
@@ -74,7 +73,7 @@ void countGender(struct Employee e[], int n) {
     printf("\nFemale employees: %d\n", female);
 }
 
-// c) Employees with salary > 10000
+
 void salaryAbove10000(struct Employee e[], int n) {
     int i;
 
@@ -87,7 +86,7 @@ void salaryAbove10000(struct Employee e[], int n) {
     }
 }
 
-// d) Employees with designation "Asst Manager"
+
 void asstManager(struct Employee e[], int n) {
     int i;
 
